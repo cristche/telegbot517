@@ -22,7 +22,8 @@ require 'vendor/autoload.php';
 $client = new Zelenin\Telegram\Bot\Api('410216312:AAHOrXDU7x7knIhyhFy2AnE_s5UN_HW9J74'); // Set your access token
 $url = ''; // URL RSS feed
 $update = json_decode(file_get_contents('php://input'));
-date_default_timezone_set("America/Caracas");
+
+//date_default_timezone_set("America/Caracas");
 
 //your app
 try {
