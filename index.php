@@ -58,7 +58,7 @@ try {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
-    		'text' => print_r($update)
+    		'text' => print_r($update->message->new_chat_participant)
     		]);
     }
 
