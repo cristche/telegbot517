@@ -57,14 +57,14 @@ try {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
-    		'text' => "Welcome ".$update->message->new_chat_participant->id." the winter is coming"
+    		'text' => "Welcome ".$update->message->new_chat_participant->username." the winter is coming"
     		]);
     }else
     {
         $response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
         $response = $client->sendMessage([
             'chat_id' => $update->message->chat->id, 
-            'text' => "Working on the greeting, the winter is coming"
+            'text' => "Working on the greeting my lord ".$update->message->from->username."the winter is coming"
             ]);
     }
 
