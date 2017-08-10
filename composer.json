@@ -1,5 +1,6 @@
 {
     "require": {
-        "longman/telegram-bot": "^0.47.1"
+        "zelenin/telegram-bot-api": "~0.0",
+	"dg/rss-php": "^1.2"
     }
 }
