@@ -54,12 +54,12 @@ try {
 				]);
 
     }
-    else
+    else if($update->message->$new_chat_participant)
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
-    		'text' => "Invalid command, please use /help to get list of available commands"
+    		'text' => "Welcome and brase yoursel".$update->message->form->first_name.", the winter its comming"
     		]);
     }
 
