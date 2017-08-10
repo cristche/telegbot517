@@ -61,6 +61,7 @@ try {
     		'chat_id' => $update->message->chat->id,
     		'text' => "Welcome ".$update->message->new_chat_participant->username.". Bienvenido a  ".$update->message->chat->title.". El grupo es para compartir cosas en torno al desarrollo web, problemas con el curso, ofertas de empleo y pare de contar. Por lo general le preguntamos a las personas nuevas qué hacen, para conocernos y entrar en confianza...\nAsí que, cuéntanos (o no) ¿qué haces? ¿cómo te enteraste del grupo? y cuales son tus expectativas acá."
     		]);
+        }
         else {
             $response = $client->sendMessage([
             'chat_id' => $update->message->chat->id,
