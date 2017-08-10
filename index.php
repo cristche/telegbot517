@@ -53,12 +53,12 @@ try {
 				]);
 
     }
-    else if($update->message->$new_chat_participant)
+    else
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
-    		'text' => "Welcome and brase yoursel".$update->message->form->first_name.", the winter its comming"
+    		'text' => print_r($update)
     		]);
     }
 
