@@ -52,13 +52,20 @@ try {
 					'text' => $message
 				]);
     }
-    else
+    else if($update->message->new_chat_participant->id != 410216312)
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
-    		'text' => $update->message->text." | ".$update->message->new_chat_participant." | ".$update->message->from->username." | ".$update->message->date 
+    		'text' => "Welcome ".$update->message->new_chat_participant->username." the winter is coming"
     		]);
+    }else
+    {
+        $response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
+        $response = $client->sendMessage([
+            'chat_id' => $update->message->chat->id, 
+            'text' => "Working on the greeting, the winter is coming"
+            ]);
     }
 
 } catch (\Zelenin\Telegram\Bot\NotOkException $e) {
