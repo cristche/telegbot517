@@ -52,7 +52,7 @@ try {
 					'text' => $message
 				]);
     }
-    else if($update->message->new_chat_participant->id != 410216312)
+    else if(strlen($update->message->new_chat_participant->id) >0 && $update->message->new_chat_participant->id != 410216312)
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
