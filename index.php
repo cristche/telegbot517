@@ -53,14 +53,24 @@ try {
 				]);
 
     }
-    else
+     else if (isset($message['new_chat_participant'])) {
+            $message1 = "Hi there"
+          if ($message['new_chat_participant']['id'] != $this->botId) {
+            $response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
+            $response = $client->sendMessage([
+                    'chat_id' => $update->message->chat->id,
+                    'text' => $message1
+                ]);
+        }
+    }
+/*    else
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
     		'text' => $update->message->new_chat_participant->new_chat_participant->username
     		]);
-    }
+    }*/
 
 } catch (\Zelenin\Telegram\Bot\NotOkException $e) {
 
