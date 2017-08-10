@@ -57,15 +57,8 @@ try {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
-    		'text' => "Welcome ".$update->message->new_chat_participant->username." the winter is coming"
+    		'text' => "Welcome ".$update->message->new_chat_participant->username.". Bienvenido a FCC Caracas. El grupo es para compartir cosas en torno al desarrollo web, problemas con el curso, ofertas de empleo y pare de contar. Por lo general le preguntamos a las personas nuevas qué hacen, para conocernos y entrar en confianza...\nAsí que, cuéntanos (o no) ¿qué haces? ¿cómo te enteraste del grupo? y cuales son tus expectativas acá."
     		]);
-    }else
-    {
-        $response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
-        $response = $client->sendMessage([
-            'chat_id' => $update->message->chat->id, 
-            'text' => "Working on the greeting my lord ".$update->message->from->username.". The winter is coming"
-            ]);
     }
 
 } catch (\Zelenin\Telegram\Bot\NotOkException $e) {
