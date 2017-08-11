@@ -29,7 +29,7 @@ $update = json_decode(file_get_contents('php://input'));
 //your app
 try {
 
-    if($update->message->text == '/email' || $update->message->text == '/email@FCCWBot')
+    if(($update->message->text'/email') || ($update->message->text == '/email@FCCWBot'))
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
@@ -37,7 +37,7 @@ try {
         	'text' => "You can send email to : cristcheparedes@gmail.com"
      	]);
     }
-    else if($update->message->text == '/help' || $update->message->text == '/help@FCCWBot')
+    else if(($update->message->text == '/help') || ($update->message->text == '/help@FCCWBot'))
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
@@ -46,7 +46,7 @@ try {
     		]);
 
     }
-    else if($update->message->text == '/today'|| $update->message->text == '/today@FCCWBot')
+    else if(($update->message->text == '/today'|| $update->message->text == '/today@FCCWBot'))
     {
 			$message = date("F j, Y, g:i a");
 			$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
@@ -58,7 +58,7 @@ try {
     else if(strlen($update->message->new_chat_participant->id) >0 && $update->message->new_chat_participant->id != 410216312)
     {
     	
-        if (strlen($update->message->new_chat_participant->username) > 0 {
+        if (strlen($update->message->new_chat_participant->username) > 0 ){
             $response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	    $response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
