@@ -18,7 +18,7 @@
 *
 */
 require 'vendor/autoload.php';
-
+date_default_timezone_set ("America/Caracas");
 $client = new Zelenin\Telegram\Bot\Api('410216312:AAHOrXDU7x7knIhyhFy2AnE_s5UN_HW9J74'); // Set your access token
 $url = ''; // URL RSS feed
 $update = json_decode(file_get_contents('php://input'));
@@ -47,8 +47,8 @@ try {
     }
     else if($update->message->text == '/today')
     {
-        date_default_timezone_set ("America/Caracas");
-			$message = date_default_timezone_get();
+        
+			$message = date('l jS \of F Y h:i:s A');
 			$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
 			$response = $client->sendMessage([
 					'chat_id' => $update->message->chat->id,
