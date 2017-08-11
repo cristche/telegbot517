@@ -28,7 +28,7 @@ $update = json_decode(file_get_contents('php://input'));
 //your app
 try {
 
-    if($update->message->text'/email')
+    if($update->message->text == '/email')
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
@@ -47,7 +47,8 @@ try {
     }
     else if($update->message->text == '/today')
     {
-			$message = date("F j, Y, g:i a");
+        date_default_timezone_set ("America/Caracas");
+			$message = date_default_timezone_get();
 			$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
 			$response = $client->sendMessage([
 					'chat_id' => $update->message->chat->id,
