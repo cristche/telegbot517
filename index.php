@@ -20,7 +20,6 @@
 require 'vendor/autoload.php';
 date_default_timezone_set ("America/Caracas");
 $client = new Zelenin\Telegram\Bot\Api('410216312:AAHOrXDU7x7knIhyhFy2AnE_s5UN_HW9J74'); // Set your access token
-$url = ''; // URL RSS feed
 $update = json_decode(file_get_contents('php://input'));
 
 
@@ -62,14 +61,14 @@ try {
             $response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	    $response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
-    		'text' => "Welcome @".$update->message->new_chat_participant->username.". Bienvenido a  ".$update->message->chat->title.". El grupo es para compartir cosas en torno al desarrollo web, problemas con el curso, ofertas de empleo y pare de contar. Por lo general le preguntamos a las personas nuevas qué hacen, para conocernos y entrar en confianza...\nAsí que, cuéntanos (o no) ¿qué haces? ¿cómo te enteraste del grupo? y cuales son tus expectativas acá."
+    		'text' => "Hello @".$update->message->new_chat_participant->username.". Welcome to  ".$update->message->chat->title.". Winter is coming so How did you know about the group? What expectations do you have? What are your interests?."
     		]);
         }
         else {
             $response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
             $response = $client->sendMessage([
             'chat_id' => $update->message->chat->id,
-            'text' => "Welcome ".$update->message->new_chat_participant->first_name." ".$update->message->new_chat_participant->last_name.". Bienvenido a ".$update->message->chat->title.". El grupo es para compartir cosas en torno al desarrollo web, problemas con el curso, ofertas de empleo y pare de contar. Por lo general le preguntamos a las personas nuevas qué hacen, para conocernos y entrar en confianza...\nAsí que, cuéntanos (o no) ¿qué haces? ¿cómo te enteraste del grupo? y cuales son tus expectativas acá."
+            'text' => "Hello ".$update->message->new_chat_participant->first_name." ".$update->message->new_chat_participant->last_name.". Welkome to ".$update->message->chat->title.". Winter is coming so How did you know about the group? What expectations do you have? What are your interests?."
             ]);
         }
     }
