@@ -9,7 +9,7 @@ The use of this bot application is not difficult, you just need to copy/paste th
 	$client = new Zelenin\Telegram\Bot\Api('AccessToken');
 
 ## Usage 
-The working version of this bot program is deployed for Cristche Paredes on HeroKu. Click on  [telegram.me/FCCWbot](telegram.me/FCCWBot) link to start interaction with the bot.
+The working version of this bot program is deployed for Cristche Paredes on HeroKu. Click on  [telegram.me/FCCWbot](https://telegram.me/FCCWBot) link to start interaction with the bot.
 
 List of available commands for this bot are,
 	
@@ -25,7 +25,7 @@ You just need to run it in your server. It is highly recommended to run "compose
 
 ## Useful link
 If you do not know how to setup a telegram bot, I recommend you to have a look on the following link
-[http://blog.madadipouya.com/2015/10/04/how-to-create-telegram-bot-with-php-and-host-in-heroku/] (http://blog.madadipouya.com/2015/10/04/how-to-create-telegram-bot-with-php-and-host-in-heroku/)
+[how-to-create-telegram-bot-with-php-and-host-in-heroku](http://blog.madadipouya.com/2015/10/04/how-to-create-telegram-bot-with-php-and-host-in-heroku/)
 
 ## Contact
 * cristcheparedes@gmail.com
