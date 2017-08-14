@@ -18,8 +18,8 @@
 *
 */
 require 'vendor/autoload.php';
-date_default_timezone_set ("America/Caracas");
-$client = new Zelenin\Telegram\Bot\Api('410216312:AAHOrXDU7x7knIhyhFy2AnE_s5UN_HW9J74'); // Set your access token
+date_default_timezone_set ("America/Caracas");//set your locale (If not, the date and time will be those of the server)
+$client = new Zelenin\Telegram\Bot\Api('xxxxxxxxxxxxxxxxxxxxxxxxxxx'); // Set your access token
 $update = json_decode(file_get_contents('php://input'));
 
 
