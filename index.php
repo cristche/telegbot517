@@ -1,20 +1,20 @@
 <?php
 
 /*
-* This file is part of GeeksWeb Bot (GWB).
+* This file is part of Telegbot517.
 *
-* GeeksWeb Bot (GWB) is free software; you can redistribute it and/or modify
+* Telegbot517 is free software; you can redistribute it and/or modify
 * it under the terms of the GNU General Public License version 3
 * as published by the Free Software Foundation.
 * 
-* GeeksWeb Bot (GWB) is distributed in the hope that it will be useful,
+* Telegbot517 is distributed in the hope that it will be useful,
 * but WITHOUT ANY WARRANTY; without even the implied warranty of
 * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 * GNU General Public License for more details.  <http://www.gnu.org/licenses/>
 *
 * Author(s):
 *
-* © 2015 Kasra Madadipouya <kasra@madadipouya.com>
+* © 2017 Cristche Paredes <cristcheparedes@gmail.com>
 *
 */
 require 'vendor/autoload.php';
@@ -61,14 +61,14 @@ try {
             $response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	    $response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
-    		'text' => "Hello @".$update->message->new_chat_participant->username.". Welcome to  ".$update->message->chat->title.". Winter is coming so How did you know about the group? What expectations do you have? What are your interests?."
+    		'text' => "Hello @".$update->message->new_chat_participant->username.". Welcome to  ".$update->message->chat->title.". Winter is coming, so tell us about yourself. How did you know about the group? What expectations do you have? What are your interests?."
     		]);
         }
         else {
             $response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
             $response = $client->sendMessage([
             'chat_id' => $update->message->chat->id,
-            'text' => "Hello ".$update->message->new_chat_participant->first_name." ".$update->message->new_chat_participant->last_name.". Welkome to ".$update->message->chat->title.". Winter is coming so How did you know about the group? What expectations do you have? What are your interests?."
+            'text' => "Hello ".$update->message->new_chat_participant->first_name." ".$update->message->new_chat_participant->last_name.". Welkome to ".$update->message->chat->title.". Winter is coming, so tell us about yourself. How did you know about the group? What expectations do you have? What are your interests?."
             ]);
         }
     }
