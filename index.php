@@ -68,7 +68,7 @@ try {
             $response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
             $response = $client->sendMessage([
             'chat_id' => $update->message->chat->id,
-            'text' => "Hello ".$update->message->new_chat_participant->first_name." ".$update->message->new_chat_participant->last_name.". Welkome to ".$update->message->chat->title.". Winter is coming, so tell us about yourself. How did you know about the group? What expectations do you have? What are your interests?."
+            'text' => "Hello ".$update->message->new_chat_participant->first_name." ".$update->message->new_chat_participant->last_name.". Welcome to ".$update->message->chat->title.". Winter is coming, so tell us about yourself. How did you know about the group? What expectations do you have? What are your interests?."
             ]);
         }
     }
